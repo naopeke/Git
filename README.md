@@ -1,4 +1,4 @@
-# Git/GitHub
+# Git/GitHub Commands
 
 **Configuración de GIT**
 ```

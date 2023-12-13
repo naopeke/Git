@@ -119,35 +119,35 @@ git push origin dia1 --force
 ```
 git checkout main
 ```
-2.リモートリポジトリから最新の変更を取得する:
+2.リモートリポジトリから最新の変更を取得
 ```
 git pull origin main
 ```
-3.dia1 ブランチの変更を main にマージする:
+3.dia1 ブランチの変更を main にマージ
 ```
 git merge dia1
 ```
-4.変更をリモートの main ブランチにプッシュする:
+4.変更をリモートの main ブランチにプッシュ
 ```
 git push origin main
 ```
 **Rebaseを使う**
-1.dia1 ブランチに切り替える:
+1.dia1 ブランチに切り替える
 ```
 git checkout dia1
 ```
-2.main ブランチからの変更をリベースする:
+2.main ブランチからの変更をリベース
 ```
 git rebase main
 ```
-3.リベース後、dia1 ブランチを main にマージする:
+3.リベース後、dia1 ブランチを main にマージ
 ```
 git checkout main
 ```
 ```
 git merge dia1
 ```
-4.変更をリモートにプッシュする:
+4.変更をリモートにプッシュ
 ```
 git push origin main
 ```

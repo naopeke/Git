@@ -1,14 +1,13 @@
 # Git/GitHub Commands
+[Configuration of GIT](#configurationofgit) | [GIT INIT](#gitinit) | [Commands](#commands)  |
 
-**Configuración de GIT**
+**Configuration of GIT**
 ```
 git config --global user.name "John Doe"
 ```
 ```
 git config --global user.email johndoe@example.com
 ```
-
-**Configución de GIT**
 ```
 git config --list<br>user.name=Scott Chacon useremail=schacon@gmail.com
 ```
@@ -24,7 +23,7 @@ git init
 git clone https://github.com/username/repository_name.git
 ```
 
-**COMMANDS**
+**Commands**
 ```
 git add .
 ```
@@ -38,7 +37,7 @@ git push
 git pull https://github.com/username/repository_name.git
 ```
 
-**RESET**
+**Reset**
 ```
 git reset --soft HEAD~
 ```
@@ -49,7 +48,7 @@ git reset --mixed HEAD~
 git reset --hard HEAD~
 ```
 
-**GIT BRANCH**
+**Branch**
 ```
 git branch new_branch_name
 ```
@@ -60,7 +59,7 @@ git branch
 git checkout branch_name
 ```
 
-**GIT MERGE**
+**Merge**
 ```
 git checkout main
 ```
@@ -68,7 +67,7 @@ git checkout main
 git merge new_branch_name
 ```
 
-**GIT IGNORE**
+**Ignore**
 ```
 touch .git ignore
 ```
@@ -81,7 +80,7 @@ vi .gitignore
 shift:wq (write & quit)
 
 
-# This branch is X commits behind main
+## This branch is X commits behind main
 dia1 ブランチが main ブランチに比べてXつのコミットで遅れているという意味です。  
 1. ローカルリポジトリを最新の状態に更新
 ```
@@ -112,7 +111,7 @@ git push origin dia1
 ```
 git push origin dia1 --force
 ```
-# This branch is X commits ahead of main
+## This branch is X commits ahead of main
 現在のブランチ（例えば dia1）が main ブランチよりも前に進んでいることを示しています。  
 **Margeを使う**  
 1.main ブランチに切り替える:
@@ -150,4 +149,61 @@ git merge dia1
 4.変更をリモートにプッシュ
 ```
 git push origin main
+```
+
+## revert
+Main, dia1, dia2, dia3, dia4, dia5のブランチがあり、dia4をmainにマージしたい場合  
+```
+commit a7ff81dcbfa11312ac73abbfad6ea7ef5c92d14a (HEAD -> main, origin/main, origin/dia5, dia6, dia5)
+Author: naopeke
+Date:   Wed Dec 27 15:58:01 2023 +0100
+
+    first commit
+
+commit 365f962c4d96647c26be4b0aeba640fc01a498d0 (origin/dia4, dia4-2, dia4)
+Author: naopeke
+Date:   Thu Dec 21 11:55:54 2023 +0100
+
+    Reto1,2 done
+```
+```
+git checkout main
+```
+```
+git revert -m 1 <commit-hash-of-dia5>
+git revert -m 1 a7ff81dcbfa11312ac73abbfad6ea7ef5c92d14a
+```
+```
+git merge dia4
+```
+```
+git push origin main
+```
+エラー表示：git revert コマンドが実行しようとしている変更が、現在の作業ディレクトリに未コミットの変更があるために失敗  
+```
+User
+╰─ git revert -m 1 a7ff81dcbfa11312ac73abbfad6ea7ef5c92d14a                  
+error: Los cambios locales de los siguientes archivos serán sobrescritos al fusionar:
+        src/app/app-routing.module.ts
+        src/app/app.module.ts
+        src/app/components/header/header.component.html
+Por favor, confirma tus cambios o aguárdalos antes de fusionar.
+Abortando
+fatal: falló al revertir
+```
+これらの変更を先にコミットするか、一時的にセーブするかしてから、git revert を再度実行  
+```
+git stash save "Temporary changes"
+```
+```
+git revert -m 1 a7ff81dcbfa11312ac73abbfad6ea7ef5c92d14a
+```
+```
+git merge dia4
+```
+```
+git push origin main
+```
+```
+git stash pop
 ```

@@ -1,7 +1,9 @@
 # Git/GitHub Commands
-[Configuration of GIT](#configurationofgit) | [GIT INIT](#gitinit) | [Commands](#commands)  |
+[Configuration](#configuration) | [Init](#init) | [Commands](#commands) | [Reset](#reset) | [Branch](#branch) | [Merge](#merge) | [Ignore](#ignore)  
+[This branch is X commits behind main](#this-branch-is-x-commits-behind-main)
+ | [This branch is Y commits ahead of main](#this-branch-is-y-commits-ahead-of-main) | [Revert](#revert)
 
-**Configuration of GIT**
+## Configuration
 ```
 git config --global user.name "John Doe"
 ```
@@ -15,7 +17,7 @@ git config --list<br>user.name=Scott Chacon useremail=schacon@gmail.com
 git help config
 ```
 
-**GIT INIT**
+## Init
 ```
 git init
 ```
@@ -23,7 +25,7 @@ git init
 git clone https://github.com/username/repository_name.git
 ```
 
-**Commands**
+## Commands
 ```
 git add .
 ```
@@ -37,7 +39,7 @@ git push
 git pull https://github.com/username/repository_name.git
 ```
 
-**Reset**
+## Reset
 ```
 git reset --soft HEAD~
 ```
@@ -48,7 +50,7 @@ git reset --mixed HEAD~
 git reset --hard HEAD~
 ```
 
-**Branch**
+## Branch
 ```
 git branch new_branch_name
 ```
@@ -59,7 +61,7 @@ git branch
 git checkout branch_name
 ```
 
-**Merge**
+## Merge
 ```
 git checkout main
 ```
@@ -67,7 +69,7 @@ git checkout main
 git merge new_branch_name
 ```
 
-**Ignore**
+## Ignore
 ```
 touch .git ignore
 ```
@@ -111,7 +113,7 @@ git push origin dia1
 ```
 git push origin dia1 --force
 ```
-## This branch is X commits ahead of main
+## This branch is Y commits ahead of main
 現在のブランチ（例えば dia1）が main ブランチよりも前に進んでいることを示しています。  
 **Margeを使う**  
 1.main ブランチに切り替える:
@@ -151,7 +153,7 @@ git merge dia1
 git push origin main
 ```
 
-## revert
+## Revert
 Main, dia1, dia2, dia3, dia4, dia5のブランチがあり、dia4をmainにマージしたい場合  
 ```
 commit a7ff81dcbfa11312ac73abbfad6ea7ef5c92d14a (HEAD -> main, origin/main, origin/dia5, dia6, dia5)
@@ -204,6 +206,7 @@ git merge dia4
 ```
 git push origin main
 ```
+一時的にセーブした変更を戻す
 ```
 git stash pop
 ```

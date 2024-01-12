@@ -210,3 +210,7 @@ git push origin main
 ```
 git stash pop
 ```
+## upstream
+```
+git push --set-upstream origin dia2
+```

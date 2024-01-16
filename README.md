@@ -71,7 +71,7 @@ git merge new_branch_name
 
 ## Ignore
 ```
-touch .git ignore
+touch .gitignore
 ```
 ```
 git status

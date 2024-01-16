@@ -80,6 +80,43 @@ git status
 vi .gitignore
 ```
 shift:wq (write & quit)
+```
+# Node.js
+node_modules/
+
+# Logs
+logs
+*.log
+
+# Dependency directories
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn
+yarn-error.log
+yarn-debug.log
+yarn.lock
+!yarn.lock.example
+
+# dotenv environment variables file
+.env
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+```
 
 
 ## This branch is X commits behind main

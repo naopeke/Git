@@ -1,7 +1,7 @@
 # Git/GitHub Commands
 [Configuration](#configuration) | [Init](#init) | [Commands](#commands) | [Reset](#reset) | [Branch](#branch) | [Merge](#merge) | [Ignore](#ignore)  
 [This branch is X commits behind main](#this-branch-is-x-commits-behind-main)
- | [This branch is Y commits ahead of main](#this-branch-is-y-commits-ahead-of-main) | [Revert](#revert)
+ | [This branch is Y commits ahead of main](#this-branch-is-y-commits-ahead-of-main) | [Revert](#revert) | [upstream](#upstream) | [Clone Branch](#clone-branch)
 
 ## Configuration
 ```
@@ -250,4 +250,20 @@ git stash pop
 ## upstream
 ```
 git push --set-upstream origin dia2
+```
+
+## Clone Branch
+```
+git clone -b Dia6 --single-branch <GitHubのリポジトリURL>
+```
+リモートリポジトリの確認（オプション）:  
+もしリモートリポジトリの変更があるか確認する場合は、以下のコマンドを実行して、リモートリポジトリの情報を更新
+```
+git fetch origin
+```
+```
+git checkout Dia6
+```
+```
+git pull origin Dia6
 ```

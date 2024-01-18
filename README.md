@@ -267,3 +267,11 @@ git checkout Dia6
 ```
 git pull origin Dia6
 ```
+  
+## Change the repo to push
+```
+git remote set-url origin <新しいリモートのURL>
+```
+```
+git remote set-url origin https://github.com/naopeke/NewRepository.git
+```

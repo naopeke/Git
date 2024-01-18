@@ -267,6 +267,16 @@ git checkout Dia6
 ```
 git pull origin Dia6
 ```
+## Change branch name
+```
+git checkout <旧いブランチ名>
+```
+```
+git branch -m <新しいブランチ名>
+```
+```
+git push origin -u <新しいブランチ名>
+```
   
 ## Change the repo to push
 ```

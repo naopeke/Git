@@ -1,7 +1,7 @@
 # Git/GitHub Commands
 [Configuration](#configuration) | [Init](#init) | [Commands](#commands) | [Reset](#reset) | [Branch](#branch) | [Merge](#merge) | [Ignore](#ignore)  
 [This branch is X commits behind main](#this-branch-is-x-commits-behind-main)
- | [This branch is Y commits ahead of main](#this-branch-is-y-commits-ahead-of-main) | [Revert](#revert) | [upstream](#upstream) | [Clone Branch](#clone-branch)
+ | [This branch is Y commits ahead of main](#this-branch-is-y-commits-ahead-of-main) | [Revert](#revert) | [upstream](#upstream) | [Clone Branch](#clone-branch) | [Change the repo to push](#change-the-repo-to-push)
 
 ## Configuration
 ```

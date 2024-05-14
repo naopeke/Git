@@ -79,7 +79,7 @@ git status
 ```
 vi .gitignore
 ```
-shift:wq (write & quit)
+[ESC] :wq (write & quit)
 ```
 # Node.js
 node_modules/
@@ -115,7 +115,12 @@ yarn.lock
 # OS generated files
 .DS_Store
 Thumbs.db
-
+```
+```
+git rm --cached .env
+```
+```
+git commit -m "Stop tracking .env file"
 ```
 
 
